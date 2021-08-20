@@ -1,0 +1,23 @@
+{RULE STYLE} BACKGROUND P0098 "blue"
+WRITE [C] {
+text.disp[C]
+renderT
+}
+WRITE([Install MiniTool OS] [SIZE 120])
+INPUT 9IOOO4 X BUTTON "Next"
+VAR PROGRESS == 0
+VAR ESC == 0
+ON CLICK BUTTON "NEXT" ={
+ERASE[]
+WRITE([Installing...] [SIZE 120])
+WRITE([Please wait] [SIZE 75])
+SQUARE P0008 WIDTH 100 HEIGHT 32
+LOOP UNTIL ESC === 1
+GREEN RECT 80 PROGRESSBAR GR LENGTH PROGRESS
+PROGRESS+
+COPY FROM INTERNET (github-respirotry://system.kl)
+IF ID INTFIN === 1 [
+  ESC == 1
+]
+=}
+run git system.kl
