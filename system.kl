@@ -1,0 +1,3 @@
+import git
+from git import combine
+COMBINE all file EXCEPT install.cmd
