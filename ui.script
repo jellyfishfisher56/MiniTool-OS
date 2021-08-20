@@ -1,0 +1,6 @@
+ui BACKGROUND-PAPER uyt://was.jpg
+rect stretch horizontal .move 720 .colour black
+button interactive message OpenStartMenu uyt://start.jpg
+on message OpenStartMenu:
+  rect sphr edge as 200 100
+ ;
